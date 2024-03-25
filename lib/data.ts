@@ -99,12 +99,24 @@ export const projectsData = [
     demoUrl: "",
   },
   {
-    title: "",
+    title: "ARCHers Vision",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A Clone of Apple Vision Pro made in Unity with Mixed Reality  capabilities  at a  0.1% of the cost . We  Purchased an old  cheap vrbox and   made a hole for the camera.", 
+    tags: ["Mediapipe ", "Unity", "Android", "C#"],
+    imageUrl: rmtdevImg,
+    githubUrl: "",
+    demoUrl: "",
   },
+  {
+    title: "Form Forge ",
+    description:
+      "An AI fitness trainer .", 
+    tags: ["ICP", "Motoko", "Unity", "HTML", "CSS"],
+    imageUrl: rmtdevImg,
+    githubUrl: "",
+    demoUrl: "",
+  },
+
 ] as const;
 
 export const skillsData = [

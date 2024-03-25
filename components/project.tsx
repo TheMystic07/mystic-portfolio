@@ -4,6 +4,9 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithubSquare } from "react-icons/fa";
+import { VscDebugAlt } from "react-icons/vsc";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,8 +15,8 @@ export default function Project({
   description,
   tags,
   imageUrl,
-  // githubUrl, 
-  // demoUrl,
+  githubUrl, 
+  demoUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -48,6 +51,24 @@ export default function Project({
               </li>
             ))}
           </ul>
+          {/* <a href={demoUrl} className=" absolute  z-10 right-12 bottom-1 h-8 w-8 bg-gray-500 backdrop-blur-sm rounded-full flex items-center justify-center ">   <BsLinkedin /> </a> */}
+
+
+        <a
+          className=" absolute  z-10 right-12 bottom-1  bg-white p-1 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href= {githubUrl}
+          target="_blank"
+        > <FaGithubSquare /> </a>
+          <a
+          className=" absolute  z-10 right-3 bottom-1  bg-white p-1 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href= {demoUrl}
+          target="_blank"
+        > <VscDebugAlt /> </a>
+
+
+
+{/* 
+          <div className=" absolute  z-10 right-3 bottom-1 h-8 w-8 bg-red-600 rounded-full "></div> */}
         </div>
 
         <Image
